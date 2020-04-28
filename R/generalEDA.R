@@ -222,7 +222,7 @@ plotly::plot_ly(data = df_daily) %>%
   plotly::add_annotations(
     x = as.Date("2020-02-25"),
     y = 1,
-    text = paste("<a href='https://saude.estadao.com.br/noticias/geral,primeiro-caso-da-covid-19-no-brasil-e-do-fim-de-janeiro-diz-ministerio-da-saude,70003258394'>Primeiro caso</a>"),
+    text = paste("<a href='https://saude.estadao.com.br/noticias/geral,primeiro-caso-da-covid-19-no-brasil-e-do-fim-de-janeiro-diz-ministerio-da-saude,70003258394'><br>Primeiro caso</br>de COVID19 no Brasil</a>"),
     xref = "x",
     yref = "y",
     arrowhead = 5,
@@ -235,7 +235,7 @@ plotly::plot_ly(data = df_daily) %>%
   plotly::add_annotations(
     x = as.Date("2020-03-17"),
     y = 3,
-    text = paste("<a href= 'https://www.em.com.br/app/noticia/nacional/2020/04/02/interna_nacional,1135097/primeira-morte-de-covid-19-no-brasil-foi-em-minas-informa-governo.shtml'>Primeira morte</a>", sep ='\n'),
+    text = paste("<a href= 'https://www.em.com.br/app/noticia/nacional/2020/04/02/interna_nacional,1135097/primeira-morte-de-covid-19-no-brasil-foi-em-minas-informa-governo.shtml'><>brPrimeira morte</br>por COVID19</a>", sep ='\n'),
     xref = "x",
     yref = "y",
     arrowhead = 5,
@@ -377,27 +377,27 @@ plotly::plot_ly(data = df_daily2) %>%
   plotly::add_annotations(
     x = as.Date("2020-02-25"),
     y = 1,
-    text = paste("<a href='https://saude.estadao.com.br/noticias/geral,primeiro-caso-da-covid-19-no-brasil-e-do-fim-de-janeiro-diz-ministerio-da-saude,70003258394'>Primeiro caso</a>"),
+    text = paste("<a href='https://saude.estadao.com.br/noticias/geral,primeiro-caso-da-covid-19-no-brasil-e-do-fim-de-janeiro-diz-ministerio-da-saude,70003258394'><br>Primeiro caso de</br>COVID19no Brasil</a>"),
     xref = "x",
     yref = "y",
     arrowhead = 5,
     arrowhead = 3,
     arrowsize = 1,
     showarrow = TRUE,
-    ax = -10,
-    ay = -50
+    ax = 10,
+    ay = -90
   ) %>%
   plotly::add_annotations(
     x = as.Date("2020-03-17"),
     y = 3,
-    text = paste("<a href= 'https://www.em.com.br/app/noticia/nacional/2020/04/02/interna_nacional,1135097/primeira-morte-de-covid-19-no-brasil-foi-em-minas-informa-governo.shtml'>Primeira morte</a>", sep ='\n'),
+    text = paste("<a href= 'https://www.em.com.br/app/noticia/nacional/2020/04/02/interna_nacional,1135097/primeira-morte-de-covid-19-no-brasil-foi-em-minas-informa-governo.shtml'><br>Primeira morte por</br>COVID19 no Brasil</a>", sep ='\n'),
     xref = "x",
     yref = "y",
     arrowhead = 5,
     arrowhead = 3,
     arrowsize = 1,
     showarrow = TRUE,
-    ax = -10,
+    ax = 0,
     ay = -50
   )  %>%
   plotly::add_annotations(
@@ -423,7 +423,7 @@ plotly::plot_ly(data = df_daily2) %>%
     arrowhead = 3,
     arrowsize = 1,
     showarrow = TRUE,
-    ax = 30,
+    ax = 10,
     ay = -90
   ) %>%
   plotly::add_annotations(
@@ -437,25 +437,12 @@ plotly::plot_ly(data = df_daily2) %>%
     arrowsize = 1.5,
     showarrow = TRUE,
     ax = -90,
-    ay = -70
+    ay = -45
   ) %>%
   plotly::add_annotations(
     x = as.Date("2020-03-13"),
     y = 0,
-    text = paste('<br>Bolsonaro testa positivo</br> para COVID19</br> e depois <a href = "https://politica.estadao.com.br/noticias/geral,bolsonaro-diz-que-2-teste-para-coronavirus-deu-negativo,70003237455">nega</a>'),
-    xref = "x",
-    yref = "y",
-    arrowhead = 5,
-    arrowhead = 3,
-    arrowsize = 1.5,
-    showarrow = TRUE,
-    ax = -30,
-    ay = -150
-  ) %>%
-  plotly::add_annotations(
-    x = as.Date("2020-03-20"),
-    y = 11,
-    text = paste('<br><a href = "https://noticias.uol.com.br/politica/ultimas-noticias/2020/03/22/coronavirus-comitiva-jair-bolsonaro-eua-donald-trump-marcelo-thome-rondonia.htm">Número de infectados da comitiva que </br> viajou com Bolsonaro</br> sobe para 23 </a>'),
+    text = paste('<br><a href = https://politica.estadao.com.br/noticias/geral,apos-descartar-coronavirus-bolsonaro-aparece-no-alvorada-vida-segue-normal,70003232060>Bolsonaro afirma que</br>testou negativo</br>para coronavírus</a>'),
     xref = "x",
     yref = "y",
     arrowhead = 5,
@@ -463,6 +450,19 @@ plotly::plot_ly(data = df_daily2) %>%
     arrowsize = 1.5,
     showarrow = TRUE,
     ax = -10,
+    ay = -120
+  ) %>%
+  plotly::add_annotations(
+    x = as.Date("2020-03-20"),
+    y = 11,
+    text = paste('<br><a href = "https://noticias.uol.com.br/politica/ultimas-noticias/2020/03/22/coronavirus-comitiva-jair-bolsonaro-eua-donald-trump-marcelo-thome-rondonia.htm">Número de infectados da comitiva</br>que viajou com Bolsonaro</br> sobe para 23 </a>'),
+    xref = "x",
+    yref = "y",
+    arrowhead = 5,
+    arrowhead = 3,
+    arrowsize = 1.5,
+    showarrow = TRUE,
+    ax = 20,
     ay = -200
   ) %>%
   plotly::add_annotations(
@@ -489,7 +489,7 @@ plotly::plot_ly(data = df_daily2) %>%
     arrowsize = 1,
     showarrow = TRUE,
     ax = 160,
-    ay = -30
+    ay = -3
   ) %>%
   plotly::add_annotations(
     x = as.Date("2020-04-08"),
@@ -514,7 +514,7 @@ plotly::plot_ly(data = df_daily2) %>%
     arrowhead = 3,
     arrowsize = 1,
     showarrow = TRUE,
-    ax = -90,
+    ax = -150,
     ay = -45
   ) %>%
   plotly::add_annotations(
@@ -533,7 +533,20 @@ plotly::plot_ly(data = df_daily2) %>%
   plotly::add_annotations(
     x = as.Date("2020-03-12"),
     y = 0,
-    text = paste('<br>Membro da comitiva presidencial nos EUA</br><a href = "https://theintercept.com/2020/03/12/wajngarten-coronavirus-covid-bolsonaro/">testa positivo para COVID19</a>'),
+    text = paste('<br>Membro da comitiva</br>presidencial nos EUA</br><a href = "https://theintercept.com/2020/03/12/wajngarten-coronavirus-covid-bolsonaro/">testa positivo para COVID19</a>'),
+    xref = "x",
+    yref = "y",
+    arrowhead = 5,
+    arrowhead = 3,
+    arrowsize = 1,
+    showarrow = TRUE,
+    ax = -150,
+    ay = -180
+  ) %>%
+  plotly::add_annotations(
+    x = as.Date("2020-04-25"),
+    y = 4057,
+    text = paste('<a = href = "https://exame.abril.com.br/brasil/governo-quer-flexibilizar-quarentena-mesmo-sem-ter-dados-sobre-leitos-e-testes/">Governo quer relaxar quarentena</a>'),
     xref = "x",
     yref = "y",
     arrowhead = 5,
@@ -541,7 +554,72 @@ plotly::plot_ly(data = df_daily2) %>%
     arrowsize = 1,
     showarrow = TRUE,
     ax = -90,
-    ay = -120
+    ay = -45
+  ) %>%
+  plotly::add_annotations(
+    x = as.Date("2020-04-12"),
+    y = 1223,
+    text = paste('<br>Bolsonaro ignora dados:</br><a href = "https://www.em.com.br/app/noticia/politica/2020/04/12/interna_politica,1137976/bolsonaro-ignora-dados-esta-comecando-a-ir-embora-a-questao-do-virus.shtml">"Está começando a ir embora <br>a questão do vírus"</a>'),
+    xref = "x",
+    yref = "y",
+    arrowhead = 5,
+    arrowhead = 3,
+    arrowsize = 1,
+    showarrow = TRUE,
+    ax = -110,
+    ay = -90
+  ) %>%
+  plotly::add_annotations(
+    x = as.Date("2020-04-11"),
+    y = 1124,
+    text = paste('<br><a href="https://g1.globo.com/jornal-nacional/noticia/2020/04/11/bolsonaro-descumpre-medidas-de-distanciamento-social-pelo-terceiro-dia-seguido.ghtml">Bolsonaro descumpre medidas</br>de distanciamento social</br>pelo terceiro dia seguido</a>'),
+    xref = "x",
+    yref = "y",
+    arrowhead = 5,
+    arrowhead = 3,
+    arrowsize = 1,
+    showarrow = TRUE,
+    ax = 110,
+    ay = 65
+  ) %>%
+  plotly::add_annotations(
+    x = as.Date("2020-03-29"),
+    y = 136,
+    text = paste('<br>Bolsonaro diz cogitar decreto</br> para <a href="https://oglobo.globo.com/brasil/bolsonaro-diz-cogitar-decreto-para-toda-qualquer-profissao-voltar-ao-trabalho-1-24336772">"toda e qualquer profissão</br>voltar ao trabalho</a>”'),
+    xref = "x",
+    yref = "y",
+    arrowhead = 5,
+    arrowhead = 3,
+    arrowsize = 1,
+    showarrow = TRUE,
+    ax = 10,
+    ay = -130
+  ) %>%
+  plotly::add_annotations(
+    x = as.Date("2020-04-17"),
+    y = 2141,
+    text = paste('<br>Bolsonaro defende</br>fim do isolamento:<a href ="https://www.correiobraziliense.com.br/app/noticia/politica/2020/04/17/interna_politica,845629/bolsonaro-fim-do-isolamento-se-agravar-vem-para-o-meu-colo.shtml"></br>"Se agravar vem pro meu colo"</a>'),
+    xref = "x",
+    yref = "y",
+    arrowhead = 5,
+    arrowhead = 3,
+    arrowsize = 1,
+    showarrow = TRUE,
+    ax = 90,
+    ay = 45
+  ) %>%
+  plotly::add_annotations(
+    x = as.Date("2020-04-20"),
+    y = 2587,
+    text = paste('<br><a href="https://g1.globo.com/politica/noticia/2020/04/20/nao-sou-coveiro-ta-diz-bolsonaro-ao-responder-sobre-mortos-por-coronavirus.ghtml">"Não sou coveiro, ta?"</a></br>diz Bolsonaro ao responder</br>sobre mortos por coronavírus'),
+    xref = "x",
+    yref = "y",
+    arrowhead = 5,
+    arrowhead = 3,
+    arrowsize = 1,
+    showarrow = TRUE,
+    ax = 90,
+    ay = 45
   ) %>%
   plotly::layout(
     title = "Mortes por COVID19 no Brasil e postura de Jair Bolsonaro",
@@ -549,4 +627,7 @@ plotly::plot_ly(data = df_daily2) %>%
     xaxis = list(title = "Data"),
     legend = list(x = 0.1, y = 0.9),
     hovermode = "compare"
-  )
+  ) 
+
+
+

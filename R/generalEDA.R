@@ -462,7 +462,7 @@ plotly::plot_ly(data = df_daily2) %>%
     arrowhead = 3,
     arrowsize = 1.5,
     showarrow = TRUE,
-    ax = 20,
+    ax = 15,
     ay = -200
   ) %>%
   plotly::add_annotations(
@@ -501,8 +501,8 @@ plotly::plot_ly(data = df_daily2) %>%
     arrowhead = 3,
     arrowsize = 1,
     showarrow = TRUE,
-    ax = -90,
-    ay = -90
+    ax = -75,
+    ay = -110
   ) %>%
   plotly::add_annotations(
     x = as.Date("2020-04-24"),
@@ -566,8 +566,8 @@ plotly::plot_ly(data = df_daily2) %>%
     arrowhead = 3,
     arrowsize = 1,
     showarrow = TRUE,
-    ax = -110,
-    ay = -90
+    ax = -100,
+    ay = -120
   ) %>%
   plotly::add_annotations(
     x = as.Date("2020-04-11"),
@@ -621,13 +621,30 @@ plotly::plot_ly(data = df_daily2) %>%
     ax = 90,
     ay = 45
   ) %>%
+  plotly::add_annotations(
+    x = as.Date("2020-04-28"),
+    y = 5083,
+    text = paste('<a href = ""><br>"E daí? Lamento,</br> quer que eu faça o quê?",</br></a>Bolsonaro sobre recorde</br> de mortos por coronavírus'),
+    xref = "x",
+    yref = "y",
+    arrowhead = 5,
+    arrowhead = 3,
+    arrowsize = 1,
+    showarrow = TRUE,
+    ax = -120,
+    ay = -45
+  ) %>%
   plotly::layout(
     title = "Mortes por COVID19 no Brasil e postura de Jair Bolsonaro",
     yaxis = list(title = "Número cumulativo de mortes"),
     xaxis = list(title = "Data"),
     legend = list(x = 0.1, y = 0.9),
     hovermode = "compare"
-  ) 
+  )
+
+
+
+
 
 
 
